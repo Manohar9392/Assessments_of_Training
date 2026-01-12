@@ -1,14 +1,11 @@
 ﻿using System;
 using model;
-
-
-
 public class Program
 {
-    static PatientBill? LastBill=null;
+    static PatientBill? LastBill=null;//static variable to keep this variable until program exists
     static bool HasLastBill=false;
     /// <summary>
-    /// Starting Point
+    /// Starting Point of MediSure Clinic Billing program
     /// </summary>
     /// <param name="args"></param>
     
@@ -48,10 +45,17 @@ public class Program
                     Console.WriteLine("No bill available.Please create a new bill first");
                 }
             break;
-            case(3):// Clear the bill
-            LastBill=null;
-            HasLastBill=false;
-            Console.WriteLine("last bill cleared");
+            case(3):
+            // Clear the bill
+            if(HasLastBill){
+                LastBill=null;
+                HasLastBill=false;
+                Console.WriteLine("last bill cleared");
+            }
+            else
+                {
+                    Console.WriteLine("Nothing to clear . First enter bill");
+                }
             break;
             case(4)://it will close the application
             flag =false;
@@ -70,7 +74,5 @@ public class Program
     
 
 
-        
-        
     }
 }

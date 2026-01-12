@@ -28,8 +28,8 @@
         Console.Write("Enter patient Name: ");
         PatientName=Console.ReadLine();
         Console.Write("Is the patient insured? (true/false):");
-        bool num=bool.TryParse(Console.ReadLine(),out num)?num:false;
-        HasInsurance=num;
+        HasInsurance=bool.TryParse(Console.ReadLine(),out bool num)?num:false;
+       
         Console.Write("Enter Consultation Fee: ");
         decimal num1=decimal.TryParse(Console.ReadLine(),out num1)?num1:0;
         ConsultationFee=num1;

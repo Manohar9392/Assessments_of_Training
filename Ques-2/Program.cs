@@ -6,11 +6,14 @@ using Question1;
     class Program
     {
         #region Description
-        static SaleTransaction? LastTransaction;
+        static SaleTransaction LastTransaction=null; //static to keep Lasttransaction variable until program exists..
         static bool HasLastTransaction = false;
         #endregion
 
         #region Main Method
+        /// <summary>
+        /// Starting point of program which deals with transaction details......
+        /// </summary>
         static void Main()
         {
             int choice;

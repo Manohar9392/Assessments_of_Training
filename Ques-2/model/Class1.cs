@@ -40,7 +40,7 @@ namespace Question1
             }
 
             ProfitMarginPercent = PurchaseAmount > 0
-                ? ProfitOrLossAmount / PurchaseAmount * 100
+                ? ProfitOrLossAmount / PurchaseAmount * 100    //Calculating profit percentage...
                 : 0;
         }
 
@@ -58,7 +58,7 @@ namespace Question1
             Console.WriteLine($"Selling Amount: {SellingAmount:F2}");
             Console.WriteLine($"Status: {ProfitOrLossStatus}");
             Console.WriteLine($"Profit/Loss Amount: {ProfitOrLossAmount:F2}");
-            Console.WriteLine($"Profit Margin (%): {ProfitMarginPercent:F2}");
+            Console.WriteLine($"Profit Margin (%): {ProfitMarginPercent}");
             Console.WriteLine("--------------------------------------------");
         }
         #endregion
